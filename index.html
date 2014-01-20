@@ -222,27 +222,10 @@ var quaid  = &#39;quaid&#39;;
 <p>Finalizer rule. The end of a constructor for an object happens-before the start of the finalizer for that object. </p>
 <p>Transitivity. If A happens-before B, and B happens-before C, then A happens-before C. </p>
 </blockquote>
-<p>happens-before原则，就是如果动作B要看到动作A的执行结果（无论A/B是否在同一个线程里面执行），那么A/B就需要满足happens-before关系。</p>
-<p>happens-before完整规则（翻译成中文）：</p>
-<ol>
-<li><p>同一个线程中的每个Action都happens-before于出现在其后的任何一个Action。</p>
-</li>
-<li><p>对一个监视器的解锁happens-before于每一个后续对同一个监视器的加锁。</p>
-</li>
-<li><p>对volatile字段的写入操作happens-before于每一个后续的同一个字段的读操作。</p>
-</li>
-<li><p>Thread.start()的调用会happens-before于启动线程里面的动作。</p>
-</li>
-<li><p>Thread中的所有动作都happens-before于其他线程检查到此线程结束或者从Thread.join（）中返回或者Thread.isAlive()返回false。</p>
-</li>
-<li><p>一个线程A调用另一个另一个线程B的interrupt（）都happens-before于线程A发现B被A中断（B抛出异常或者A检测到B的isInterrupted（）或者interrupted()）。</p>
-</li>
-<li><p>一个对象构造函数的结束happens-before与该对象的finalizer的开始</p>
-</li>
-<li><p>如果A动作happens-before于B动作，而B动作happens-before与C动作，那么A动作happens-before于C动作。（hb具有传递性）</p>
-</li>
-</ol>
-
+<p>
+            <a href="/2014/01/17/happens-before rule/" class="more-link">
+              Continue →
+            </2a>
           
         </div>
 

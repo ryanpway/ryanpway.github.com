@@ -161,7 +161,8 @@
 <p>Finalizer rule. The end of a constructor for an object happens-before the start of the finalizer for that object. </p>
 <p>Transitivity. If A happens-before B, and B happens-before C, then A happens-before C. </p>
 </blockquote>
-<p>happens-before原则，就是如果动作B要看到动作A的执行结果（无论A/B是否在同一个线程里面执行），那么A/B就需要满足happens-before关系。</p>
+<p><a id="more"></a>
+happens-before原则，就是如果动作B要看到动作A的执行结果（无论A/B是否在同一个线程里面执行），那么A/B就需要满足happens-before关系。</p>
 <p>happens-before完整规则（翻译成中文）：</p>
 <ol>
 <li><p>同一个线程中的每个Action都happens-before于出现在其后的任何一个Action。</p>
