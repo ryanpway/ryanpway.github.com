@@ -156,7 +156,8 @@
         </h1>
         <div class="entry-content" itemprop="articleBody">
           
-            <pre><code>var joe    = &#39;joe&#39;;
+            <hr>
+<pre><code>var joe    = &#39;joe&#39;;
 var johnny = &#39;johnny&#39;;
 var quaid  = &#39;quaid&#39;;
 </code></pre>
@@ -195,15 +196,24 @@ var quaid  = &#39;quaid&#39;;
           
 	</div>
         <h1 class="title" itemprop="name">
-          <a href="/2014/01/17/new-post/" itemprop="url">
-            New Post</a>
+          <a href="/2014/01/17/happens-before rule/" itemprop="url">
+            happens-before rule</a>
         </h1>
         <div class="entry-content" itemprop="articleBody">
           
-            <h3 id="asd">asd</h3>
-<pre><code>sadasd
-asdddd
-</code></pre>
+            <p>JMM规范： </p>
+<blockquote>
+<p>The rules for happens-before are: </p>
+<p>Program order rule. Each action in a thread happens-before every action in that thread that comes later in the program order. </p>
+<p>Monitor lock rule. An unlock on a monitor lock happens-before every subsequent lock on that same monitor lock. </p>
+<p>Volatile variable rule. A write to a volatile field happens-before every subsequent read of that same field. </p>
+<p>Thread start rule. A call to Thread.start on a thread happens-before every action in the started thread. </p>
+<p>Thread termination rule. Any action in a thread happens-before any other thread detects that thread has terminated, either by successfully return from Thread.join or by Thread.isAlive returning false. </p>
+<p>Interruption rule. A thread calling interrupt on another thread happens-before the interrupted thread detects the interrupt (either by having InterruptedException tHRown, or invoking isInterrupted or interrupted). </p>
+<p>Finalizer rule. The end of a constructor for an object happens-before the start of the finalizer for that object. </p>
+<p>Transitivity. If A happens-before B, and B happens-before C, then A happens-before C. </p>
+</blockquote>
+
           
         </div>
 
