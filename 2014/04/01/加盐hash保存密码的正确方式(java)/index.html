@@ -104,7 +104,7 @@
   <h3 class="title">Tags</h3>
   <ul class="entry">
   
-    <li><a href="/tags/java/">java</a><small>1</small></li>
+    <li><a href="/tags/java/">java</a><small>2</small></li>
   
     <li><a href="/tags/jmm/">jmm</a><small>1</small></li>
   
@@ -149,14 +149,15 @@
           
 	</div>
         <h1 class="title" itemprop="name">java加盐hash保存密码的正确方式</h1>
-      	<div class="entry-content" itemprop="articleBody"><hr>
-<pre><code>import java.security.SecureRandom;
+      	<div class="entry-content" itemprop="articleBody"><pre><code>import java.security.SecureRandom;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.SecretKeyFactory;
 import java.math.BigInteger;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
+
+&lt;!--more--&gt;
 /*
  * PBKDF2 salted password hashing.
  * Author: havoc AT defuse.ca
