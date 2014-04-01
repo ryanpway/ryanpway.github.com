@@ -149,7 +149,12 @@
           
 	</div>
         <h1 class="title" itemprop="name">java加盐hash保存密码的正确方式</h1>
-      	<div class="entry-content" itemprop="articleBody"><pre><code>import java.security.SecureRandom;
+      	<div class="entry-content" itemprop="articleBody"><p>转账自：<a href="http://drops.wooyun.org/papers/1066" target="_blank">wooyun</a></p>
+<p>大多数的web开发者都会遇到设计用户账号系统的需求。账号系统最重要的一个方面就是如何保护用户的密码。一些大公司的用户数据库泄露事件也时有发生，所以我们必须采取一些措施来保护用户的密码，即使网站被攻破的情况下也不会造成较大的危害。保护密码最好的的方式就是使用带盐的密码hash(salted password hashing).</p>
+<p>java代码如下：</p>
+<a id="more"></a>
+
+<pre><code>import java.security.SecureRandom;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.SecretKeyFactory;
 import java.math.BigInteger;
@@ -157,7 +162,6 @@ import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
 
 
-&lt;!--more--&gt;
 /*
  * PBKDF2 salted password hashing.
  * Author: havoc AT defuse.ca
